@@ -25,12 +25,6 @@ a, a:hover, a:visited{
     text-decoration: none;
 }
 
-.div_formacao{
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2)
-}
-
 #img_gabriel{
     border-radius: 50%;
     max-width: 20%;

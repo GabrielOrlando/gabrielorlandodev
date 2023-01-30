@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </head>
+
 <body>
     <div>
-        <header class="">
+        <header>
             <div class="page-header">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#div_menu" aria-controls="div_menu" aria-expanded="false" aria-label="Alterna navegação">
@@ -23,18 +25,17 @@
                     </button>
                     <div class="collapse navbar-collapse" id="div_menu">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active"><a href="#" class="nav-link">Inicio <span class="sr-only">(current)</span></a></li>
-                            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-                            <li class="nav-item"><a href="precos.html" class="nav-link">Preços</a></li>
-                            
-                            <li class="nav-item active">><a href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a href="../index.html#section_sobre">Sobre</a></li>
-                            <li class="nav-item"><a href="../index.html#section_formacao">Formação</a></li>
-                            <li class="nav-item"><a href="../index.html#section_experiencia">Experiência Profissional</a></li>
-                            <li class="nav-item"><a href="../index.html#section_projetos">Projetos</a></li>
-                            <li class="nav-item"><a href="#">Blog</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#section_sobre">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#section_formacao">Formação</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#section_experiencia">Experiência Profissional</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#section_projetos">Projetos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                             <li class="nav-item">
-                                <select name="select_idioma" id="select_idioma" disabled="disabled">
+                                <label for="select_idioma" class="nav-link">Idioma</label>
+                            </li>
+                            <li class="nav-item">
+                                <select name="select_idioma" id="select_idioma" disabled="disabled" class="form-control">
                                     <option value="pt-BR" selected>Português</option>
                                 </select>
                             </li>
@@ -43,7 +44,7 @@
                 </nav>
             </div>
         </header>
-        
+
         <main class="container">
             <section id="section_sobre">
                 <h1>Quem é o Gabriel Orlando?</h1>
@@ -54,61 +55,77 @@
             <section id="section_formacao">
                 <h1>Formação Acadêmica</h1>
                 <!-- Criar animação com grafico circular 80% -->
-                <div id="div_formacao_ciencias_computacao" class="div_formacao">
-                    <p><i class="bi bi-book"></i> Ciências da Computação</p>
-                    <p><i class="bi bi-geo-alt"></i> Universidade Paulista (UNIP) - Jundiaí/SP</p>
-                    <p><i class="bi bi-calendar3"></i> Não Concluído - Cursado até 8 semestre</p>
+                <div id="div_formacao_ciencias_computacao" class="div_formacao card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Ciências da Computação</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> Universidade Paulista (UNIP) - Jundiaí/SP</p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Não Concluído - Cursado até 8 semestre</p>
+                    </div>
                 </div>
 
-                <div id="div_formacao_tecnico" class="div_formacao">
-                    <p><i class="bi bi-book"></i> Ensino médio profissionalizante - Técnico em Informática</p>
-                    <p><i class="bi bi-geo-alt"></i> Colégio Divino Salvador - Jundiaí/SP</p>
-                    <p><i class="bi bi-calendar3"></i> Concluído em Dez/2015</p>
+                <div id="div_formacao_tecnico" class="div_formacao card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Ensino médio profissionalizante - Técnico em Informática</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> Colégio Divino Salvador - Jundiaí/SP</p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Concluído em Dez/2015</p>
+                    </div>
                 </div>
             </section>
-            
+
             <section id="section_experiencia">
                 <h1>Experiência Profissional</h1>
-                <div id="div_experiencia_sankhya" class="div_experiencia">
-                    <p><i class="bi bi-book"></i> Desenvolvedor Front-End</p>
-                    <p><i class="bi bi-geo-alt"></i> Sankhya</p>
-                    <p><i class="bi bi-calendar3"></i> Ago/2022 até Jan/2023</p>
-                    <p><i class="bi bi-award"></i> Realizado o desenvolvimento de páginas de uso interno utilizando tecnologias HTML5, CSS3, JavaScript, Bootstrap, com atuações pontuais em PHP.</p>
+                <div id="div_experiencia_sankhya" class="div_experiencia card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Desenvolvedor Front-End</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> Sankhya</p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Ago/2022 até Jan/2023</p>
+                        <p class="card-text"><i class="bi bi-award"></i> Realizado o desenvolvimento de páginas de uso interno utilizando tecnologias HTML5, CSS3, JavaScript, Bootstrap, com atuações pontuais em PHP.</p>
+                    </div>
                 </div>
 
-                <div id="div_experiencia_iv2-2" class="div_experiencia">
-                    <p><i class="bi bi-book"></i> Desenvolvedor Front-End</p>
-                    <p><i class="bi bi-geo-alt"></i> Grupo Iv2</p>
-                    <p><i class="bi bi-calendar3"></i> Ago/2020 até Jan/2022</p>
-                    <p><i class="bi bi-award"></i> Atuação no desenvolvimento e manutenção de projetos TOTVS FLUIG utilizando as tecnologias HTML5, CSS3, JavaScript, Bootstrap. Realizado desenvolvimento de Workflows BPMN, ECM, WCM, integrações com TOTVS RM e algumas atuações pontuais com SQL.</p>
+                <div id="div_experiencia_iv2-2" class="div_experiencia card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Desenvolvedor Front-End</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> Grupo Iv2</p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Ago/2020 até Jan/2022</p>
+                        <p class="card-text"><i class="bi bi-award"></i> Atuação no desenvolvimento e manutenção de projetos TOTVS FLUIG utilizando as tecnologias HTML5, CSS3, JavaScript, Bootstrap. Realizado desenvolvimento de Workflows BPMN, ECM, WCM, integrações com TOTVS RM e algumas atuações pontuais com SQL.</p>
+                    </div>
                 </div>
 
-                <div id="div_experiencia_iv2-1" class="div_experiencia">
-                    <p><i class="bi bi-book"></i> Estagiário - Desenvolvimento Front-End</p>
-                    <p><i class="bi bi-geo-alt"></i> Grupo Iv2</p>
-                    <p><i class="bi bi-calendar3"></i> Set/2019 até Ago/2020</p>
-                    <p><i class="bi bi-award"></i> Estudos de HTML5, CSS3, JavaScript, consumo de APIs e TOTVS FLUIG. Atuação no desenvolvimento de projetos FLUIG utilizando todas as tecnologias mencionadas.</p>
+                <div id="div_experiencia_iv2-1" class="div_experiencia card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Estagiário - Desenvolvimento Front-End</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> Grupo Iv2</p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Set/2019 até Ago/2020</p>
+                        <p class="card-text"><i class="bi bi-award"></i> Estudos de HTML5, CSS3, JavaScript, consumo de APIs e TOTVS FLUIG. Atuação no desenvolvimento de projetos FLUIG utilizando todas as tecnologias mencionadas.</p>
+                    </div>
                 </div>
 
-                <div id="div_experiencia_joyson" class="div_experiencia">
-                    <p><i class="bi bi-book"></i> Estagiário - Suporte N1</p>
-                    <p><i class="bi bi-geo-alt"></i> Joyson Safety Systems</p>
-                    <p><i class="bi bi-calendar3"></i> Jan/2019 até Set/2019</p>
-                    <p><i class="bi bi-award"></i> Resolução de chamados básicos e redirecionamento de chamados específicos.</p>
+                <div id="div_experiencia_joyson" class="div_experiencia card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Estagiário - Suporte N1</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> Joyson Safety Systems</p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Jan/2019 até Set/2019</p>
+                        <p class="card-text"><i class="bi bi-award"></i> Resolução de chamados básicos e redirecionamento de chamados específicos.</p>
+                    </div>
                 </div>
 
-                <div id="div_experiencia_eb" class="div_experiencia">
-                    <p><i class="bi bi-book"></i> Soldado</p>
-                    <p><i class="bi bi-geo-alt"></i> Exército Brasileiro - 12GAC</p>
-                    <p><i class="bi bi-calendar3"></i> Mar/2017 até Jan/2018</p>
-                    <p><i class="bi bi-award"></i> Serviço militar obrigatório. Soldado de efetivo variável de comunicações. Saída com Honra ao Mérito.</p>
+                <div id="div_experiencia_eb" class="div_experiencia card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Soldado</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> Exército Brasileiro - 12GAC</p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Mar/2017 até Jan/2018</p>
+                        <p class="card-text"><i class="bi bi-award"></i> Serviço militar obrigatório. Soldado de efetivo variável de comunicações. Saída com Honra ao Mérito.</p>
+                    </div>
                 </div>
 
-                <div id="div_experiencia_eb" class="div_experiencia">
-                    <p><i class="bi bi-book"></i> Instrutor de Informática Freelancer</p>
-                    <p><i class="bi bi-geo-alt"></i> SA Treinamento em Informática e Idiomas EIRELI EPP "MicroPro" </p>
-                    <p><i class="bi bi-calendar3"></i> Mar/2016 até Jul/2016</p>
-                    <p><i class="bi bi-award"></i> Instrutor de informatica básica (Windows e pacote office) e Desenvolvimento Web (HTML, CSS e JavaScript) utilizando DreamWeaver.</p>
+                <div id="div_experiencia_eb" class="div_experiencia card">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-book"></i> Instrutor de Informática Freelancer</h3>
+                        <p class="card-text"><i class="bi bi-geo-alt"></i> SA Treinamento em Informática e Idiomas EIRELI EPP "MicroPro" </p>
+                        <p class="card-text"><i class="bi bi-calendar3"></i> Mar/2016 até Jul/2016</p>
+                        <p class="card-text"><i class="bi bi-award"></i> Instrutor de informatica básica (Windows e pacote office) e Desenvolvimento Web (HTML, CSS e JavaScript) utilizando DreamWeaver.</p>
+                    </div>
                 </div>
             </section>
 
@@ -133,22 +150,23 @@
 
             <section id="section_projetos">
                 <h1>Projetos</h1>
-                <div id="div_pokedex" class="div_projetos card">
+                <div id="div_pokedex" class="div_projetos card col-md-4">
                     <div class="card-body">
                         <h3 class="card-title">Pokedex + Quiz Pokemon</h3>
-                        <p class="card-text">Desenvolvi o Projeto Pokedex em 2019 durante meus estudos de consumo de APIs. Nele utilizei as tecnologias HTML5, CSS3, JS e Bootstrap. Criei um mini sistema substituindo o banco de dados por gravação e leitura de dados em Local Storage.</p>    
+                        <p class="card-text">Desenvolvi o Projeto Pokedex em 2019 durante meus estudos de consumo de APIs. Nele utilizei as tecnologias HTML5, CSS3, JS e Bootstrap. Criei um mini sistema substituindo o banco de dados por gravação e leitura de dados em Local Storage.</p>
                         <a href="projetos/pokedex.html" class="btn btn-primary">Saiba Mais</a>
                     </div>
-                    
-                    
+
+
                 </div>
             </section>
         </main>
-        
+
         <footer>
             <p>Para entrar em contato envie email para <a href="mailto:contato@gabrielorlando.dev.br">contato@gabrielorlando.dev.br</a>.</p>
             <p>Desenvolvido por Gabriel Orlando</p>
         </footer>
     </div>
 </body>
+
 </html>
