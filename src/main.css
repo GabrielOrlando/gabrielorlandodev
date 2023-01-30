@@ -1,7 +1,9 @@
 header{
+    background-color: #333;
     overflow: hidden;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     text-align: center;
 }
@@ -10,8 +12,13 @@ header ul, header ul li{
     display: inline-block;
 }
 
+header a{
+    color: white;
+}
+
 main{
     width: 80%;
+    min-width: 300px;
     margin: 50px auto 0px auto;
 }
 
@@ -19,8 +26,18 @@ footer{
     text-align: center;
 }
 
+a, a:hover, a:visited{
+    text-decoration: none;
+}
+
 .div_formacao{
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2)
+}
+
+#img_gabriel{
+    border-radius: 50%;
+    max-width: 20%;
+    min-width: 300px;
 }
