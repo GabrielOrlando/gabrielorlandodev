@@ -6,28 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Orlando</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#section_sobre">Sobre</a></li>
-                <li><a href="../index.html#section_formacao">Formação</a></li>
-                <li><a href="../index.html#section_experiencia">Experiência Profissional</a></li>
-                <li><a href="../index.html#section_projetos">Projetos</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-
-            <select name="select_idioma" id="select_idioma" disabled="disabled">
-                <option value="pt-BR" selected>Português</option>
-            </select>
+    <div>
+        <header class="">
+            <div class="page-header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#div_menu" aria-controls="div_menu" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="div_menu">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active"><a href="#" class="nav-link">Inicio <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                            <li class="nav-item"><a href="precos.html" class="nav-link">Preços</a></li>
+                            
+                            <li class="nav-item active">><a href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a href="../index.html#section_sobre">Sobre</a></li>
+                            <li class="nav-item"><a href="../index.html#section_formacao">Formação</a></li>
+                            <li class="nav-item"><a href="../index.html#section_experiencia">Experiência Profissional</a></li>
+                            <li class="nav-item"><a href="../index.html#section_projetos">Projetos</a></li>
+                            <li class="nav-item"><a href="#">Blog</a></li>
+                            <li class="nav-item">
+                                <select name="select_idioma" id="select_idioma" disabled="disabled">
+                                    <option value="pt-BR" selected>Português</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
         
-        <main>
+        <main class="container">
             <section id="section_sobre">
                 <h1>Quem é o Gabriel Orlando?</h1>
                 <img src="../img/gabriel.jpg" alt="Gabriel Orlando" id="img_gabriel">
@@ -116,9 +133,14 @@
 
             <section id="section_projetos">
                 <h1>Projetos</h1>
-                <div id="div_pokedex" class="div_projetos">
-                    <p>Desenvolvi o Projeto Pokedex em 2019 durante meus estudos de consumo de APIs. Nele utilizei as tecnologias HTML5, CSS3, JS e Bootstrap. Criei um mini sistema substituindo o banco de dados por gravação e leitura de dados em Local Storage.</p>
-                    <a href="projetos/pokedex.html">Ver projeto</a>
+                <div id="div_pokedex" class="div_projetos card">
+                    <div class="card-body">
+                        <h3 class="card-title">Pokedex + Quiz Pokemon</h3>
+                        <p class="card-text">Desenvolvi o Projeto Pokedex em 2019 durante meus estudos de consumo de APIs. Nele utilizei as tecnologias HTML5, CSS3, JS e Bootstrap. Criei um mini sistema substituindo o banco de dados por gravação e leitura de dados em Local Storage.</p>    
+                        <a href="projetos/pokedex.html" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                    
+                    
                 </div>
             </section>
         </main>
