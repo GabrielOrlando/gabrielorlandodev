@@ -1,5 +1,4 @@
 header{
-    background-color: #333;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -12,24 +11,25 @@ header ul, header ul li{
     display: inline-block;
 }
 
-header a{
-    color: white;
-}
-
 main{
     margin-top: 60px;
-}
-
-footer{
-    text-align: center;
 }
 
 a, a:hover, a:visited{
     text-decoration: none;
 }
 
+ul{
+    padding-left: 15px;
+    list-style-type: none;
+}
+
 #img_gabriel{
     border-radius: 50%;
     max-width: 20%;
     min-width: 300px;
+}
+
+.nav-item{
+    padding: 0px 10px 0px 10px;
 }

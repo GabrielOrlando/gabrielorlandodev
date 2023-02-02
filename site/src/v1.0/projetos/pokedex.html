@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Dev Gabriel Orlando</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../main.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../main.js"></script>
+</head>
+
+<body>
+    <header style="z-index: 2;">
+        <div class="page-header">
+            <nav class="navbar navbar-expand-lg bg-primary">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#div_menu" aria-controls="div_menu" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="div_menu">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="btn btn-outline-dark" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="btn btn-outline-dark" href="../index.html#section_sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="btn btn-outline-dark" href="../index.html#section_formacao">Formação</a></li>
+                        <li class="nav-item"><a class="btn btn-outline-dark" href="../index.html#section_experiencia">Experiência Profissional</a></li>
+                        <li class="nav-item"><a class="btn btn-outline-dark" href="../index.html#section_projetos">Projetos</a></li>
+                        <li class="nav-item"><a class="btn btn-outline-dark" href="blog.gabrielorlando.dev.br" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+
+    <main class="container">
+        <section id="section_projetos" class="card border-primary">
+            <div class="card-header bg-primary text-white text-center">
+                <h1><i class="bi bi-lightbulb-fill"></i> Projetos</h1>
+            </div>
+            <div class="card-body">
+                <div id="div_pokedex" class="div_projetos card col-md-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Pokedex + Quiz Pokemon</h3>
+                        <p class="card-text">Desenvolvi o Projeto Pokedex em 2019 durante meus estudos de consumo de APIs. Nele utilizei as tecnologias HTML5, CSS3, JS e Bootstrap. Criei um mini sistema substituindo o banco de dados por gravação e leitura de dados em Local Storage.</p>
+
+                        <a href="https://github.com/GabrielOrlando/pokedex" target="_blank" class="btn btn-primary">Github</a>
+                        <a href="pokedex/index.html" target="_blank" class="btn btn-primary">Testar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <br>
+
+    <footer class="text-center border-top">
+        <!-- <div>
+                <label for="select_idioma" class="nav-link">Idioma</label>
+                <select name="select_idioma" id="select_idioma" class="form-control" style="width: 100px;">
+                    <option value="pt-BR" selected>PT-BR</option>
+                    <option value="en" disabled>EN</option>
+                </select>
+            </div> -->
+
+        <p>Para entrar em contato envie email para <a href="mailto:contato@gabrielorlando.dev.br">contato@gabrielorlando.dev.br</a></p>
+        <p>Desenvolvido por Gabriel Orlando</p>
+    </footer>
+</body>
+
+</html>
