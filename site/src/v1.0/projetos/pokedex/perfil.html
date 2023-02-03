@@ -2,6 +2,16 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPK0TYRVCC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KPK0TYRVCC');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,15 +20,9 @@
 
     <!-- BOOTSTRAP LINKS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- FIM BOOTSTRAP LINKS -->
 
     <title>Home - Projeto Pokemon</title>
@@ -52,8 +56,8 @@
         body {
             color: blue;
         }
-        
-        ul{
+
+        ul {
             list-style: none;
         }
     </style>
@@ -66,8 +70,7 @@
                 <nav class="navbar navbar-expand navbar-light bg-light">
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active"><a href="home.html" class="nav-link">Inicio <span
-                                        class="sr-only">(current)</span></a></li>
+                            <li class="nav-item active"><a href="home.html" class="nav-link">Inicio <span class="sr-only">(current)</span></a></li>
                             <li class="nav-item"><a href="pokedex.html" class="nav-link">Pokedex</a></li>
                             <li class="nav-item"><a href="quiz.html" class="nav-link">PokeQuiz</a></li>
                             <li class="nav-item"><a href="perfil.html" class="nav-link">Perfil</a></li>
@@ -99,9 +102,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="card-text">
-                                <input type="text" placeholder="O que quer compartilhar hoje?" size="50" id="txtComp"><input
-                                    type="button" class="btn btn-sm btn-outline-success" value="Pronto!"
-                                    onclick="newPost()">
+                                <input type="text" placeholder="O que quer compartilhar hoje?" size="50" id="txtComp"><input type="button" class="btn btn-sm btn-outline-success" value="Pronto!" onclick="newPost()">
 
                                 <hr class="my-4">
 
@@ -109,7 +110,9 @@
                                     <h3 style="text-align: center"> -- Posts -- </h3>
                                     <hr class="my-4">
                                     <ul id="list_comp">
-                                        <li><h3 style="text-align: center"> -- Posts -- </h3></li>
+                                        <li>
+                                            <h3 style="text-align: center"> -- Posts -- </h3>
+                                        </li>
                                         <hr class="my-4">
                                     </ul>
                                 </div>
@@ -257,10 +260,8 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="https://www.facebook.com/gabrielc.orlando" target="new"><img src="img/facebook.png"
-                            alt="Facebook" /></a>
-                    <a href="https://www.instagram.com/bielorlando" target="new"><img src="img/instagram.png"
-                            alt="Instagram" /></a>
+                    <a href="https://www.facebook.com/gabrielc.orlando" target="new"><img src="img/facebook.png" alt="Facebook" /></a>
+                    <a href="https://www.instagram.com/bielorlando" target="new"><img src="img/instagram.png" alt="Instagram" /></a>
                     <a href="https://www.twitter.com/" target="new"><img src="img/twitter.png" alt="Twitter" /></a>
                 </div>
             </nav>
