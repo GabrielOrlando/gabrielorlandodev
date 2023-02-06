@@ -1,0 +1,35 @@
+header{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+header ul, header ul li{
+    display: inline-block;
+}
+
+main{
+    margin-top: 60px;
+}
+
+a, a:hover, a:visited{
+    text-decoration: none;
+}
+
+ul{
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+#img_gabriel{
+    border-radius: 50%;
+    max-width: 20%;
+    min-width: 300px;
+}
+
+.nav-item{
+    padding: 0px 10px 0px 10px;
+}
