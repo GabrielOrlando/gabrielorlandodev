@@ -3,6 +3,7 @@ Este é o projeto de portfólio do Gabriel Orlando. O projeto está separado em 
 
 ### Tecnologias
 O projeto é desenvolvido utilizando HTML5, CSS3, JavaScript, JQuery, PHP, Bootstrap e SQL.
+
 ---
 
 ## Site
