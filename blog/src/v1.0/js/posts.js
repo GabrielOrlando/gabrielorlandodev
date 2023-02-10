@@ -1,7 +1,3 @@
-$(document).ready( () => {
-    //constructorPosts();
-});
-
 function constructorPosts(){
     let dataPosts = buscarPosts();
     carregaPosts(dataPosts);
