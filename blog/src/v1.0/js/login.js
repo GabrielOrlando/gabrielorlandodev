@@ -1,11 +1,11 @@
-$(document).ready( () => {
+$(document).ready(() => {
     events();
     carregaCredenciais();
 });
 
-function events(){
+function events() {
     $('#btn_login').on('click', () => {
-        buscarUsuario(checkLogin()) == 'Usuário ou senha incorreta.' ? alert('Usuário ou senha incorreta.') : true;        
+        $('#login_txt_email').val().trim() == '' || $('#login_txt_password').val().trim() == '' ? alert('Favor preencher email e senha.') : buscarUsuario( $('#login_txt_email').val().trim(), $('#login_txt_password').val().trim() );
     });
 
     $('#btn_cadastro').on('click', () => {
@@ -13,35 +13,51 @@ function events(){
         $('#form_cadastro').show();
     });
 
+    document.querySelector('#login_txt_password').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            $('#login_txt_email').val().trim() == '' || $('#login_txt_password').val().trim() == '' ? alert('Favor preencher email e senha.') : buscarUsuario( $('#login_txt_email').val().trim(), $('#login_txt_password').val().trim() );
+        }
+    });
+
+    document.querySelector('#login_txt_email').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            $('#login_txt_email').val().trim() == '' || $('#login_txt_password').val().trim() == '' ? alert('Favor preencher email e senha.') : buscarUsuario( $('#login_txt_email').val().trim(), $('#login_txt_password').val().trim() );
+        }
+    });
+
     $('#btn_novo_usuario').on('click', () => {
 
     });
 }
 
-function carregaCredenciais(){
-    let email = localStorage.getItem('login');
-    let pass = localStorage.getItem('pass');
+function carregaCredenciais() {
+    let email = localStorage.getItem('email');
+    let senha = localStorage.getItem('senha');
 
-    if(email && pass){
+    if (email && senha) {
         $('#login_txt_email').val(email);
-        $('#login_txt_password').val(pass)
+        $('#login_txt_password').val(senha)
     }
 }
 
-function buscarUsuario(login){
+function buscarUsuario(email, senha) {
     let usuario;
 
-    if(!login){
+    if (email == '' || senha == '') {
         console.error('Usuário ou Senha incorretos.');
         alert('Usuário ou Senha incorretos.');
     } else {
-        // alert('Ok')
+        if ($('#ckb_remember').prop("checked") == "checked") {
+            localStorage.setItem('email') = email;
+            localStorage.setItem('senha') = senha;
+        }
+
         $.ajax({
             url: "php/user/login.php",
             type: "POST",
             data: {
-                'usuario': $('#login_txt_email').val().trim(),
-                'senha' : $('#login_txt_password').val().trim()
+                'usuario': email,
+                'senha': senha
             },
             async: false,
             success: function (data) {
@@ -57,40 +73,26 @@ function buscarUsuario(login){
     return usuario;
 }
 
-function checkLogin(){
-    if($('#login_txt_email').val().trim() != '' && $('#login_txt_password').val().trim() != ''){
-
-        if($('#ckb_remember').prop("checked") == "checked"){
-            localStorage.setItem('login') = $('#login_txt_email').val().trim();
-            localStorage.setItem('pass') = $('#login_txt_password').val().trim();
-        }
-
-        return true;
-    } else {
-        return false;
-    }
-}
-
-function checkCadastro(){
-    if($('#cad_txt_email').val().trim() != ''){
-        if($('#cad_txt_nome').val().trim() != ''){
-            if($('#cad_txt_sobrenome').val().trim() != ''){
-                if($('#cad_password').val().trim() != ''){
-                    if($('#cad_password_confirm').val().trim() != ''){
-                        if($('#cad_password').val().trim() == $('#cad_password_confirm').val().trim()){
-                            if($('#ckb_termos').prop("checked") == "checked"){
+function checkCadastro() {
+    if ($('#cad_txt_email').val().trim() != '') {
+        if ($('#cad_txt_nome').val().trim() != '') {
+            if ($('#cad_txt_sobrenome').val().trim() != '') {
+                if ($('#cad_password').val().trim() != '') {
+                    if ($('#cad_password_confirm').val().trim() != '') {
+                        if ($('#cad_password').val().trim() == $('#cad_password_confirm').val().trim()) {
+                            if ($('#ckb_termos').prop("checked") == "checked") {
                                 $.ajax({
                                     url: "PHP/user/cadastro.php",
                                     type: "POST",
                                     data: {
                                         'email': $('#cad_txt_email').val().trim(),
-                                        'nome' :  $('#cad_txt_nome').val().trim(),
-                                        'sobrenome' : $('#cad_txt_sobrenome').val().trim(),
-                                        'senha' : $('#cad_password').val().trim()
+                                        'nome': $('#cad_txt_nome').val().trim(),
+                                        'sobrenome': $('#cad_txt_sobrenome').val().trim(),
+                                        'senha': $('#cad_password').val().trim()
                                     },
                                     async: false,
                                     success: function (data) {
-                                        console.log("Login!")
+                                        console.log("Cadastrou!")
                                     },
                                     error: function (e) {
                                         console.log(e)
