@@ -43,7 +43,7 @@
                     <div class="collapse navbar-collapse justify-content-center" id="div_menu">
                         <ul class="navbar-nav mr-auto col-md-10">
                             <li class="nav-item active"><a class="btn btn-outline-dark" href="blog.gabrielorlando.dev.br/">Inicio</a></li>
-                            <li class="nav-item"><a class="btn btn-outline-dark" href="blog.gabrielorlando.dev.br/index.html#section_sobre">Categorias</a></li>
+                            <li class="nav-item"><a class="btn btn-outline-dark" href="#">Categorias</a></li>
                             <li class="nav-item" style="display: none;"><a class="btn btn-outline-dark" href="painel_controle/dashboard.php">Painel de Controle</a></li>
                             <li class="nav-item"></li>
                         </ul>

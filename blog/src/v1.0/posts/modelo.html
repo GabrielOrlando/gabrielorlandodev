@@ -17,6 +17,62 @@
     <title>Modelo de Post - Blog</title>
 </head>
 <body>
-    
+    <div class="container">
+        <header style="z-index: 2;">
+            <div class="page-header">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#div_menu" aria-controls="div_menu" aria-expanded="false" aria-label="Alterna navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="div_menu">
+                        <ul class="navbar-nav mr-auto col-md-10">
+                            <li class="nav-item active"><a class="btn btn-outline-dark" href="blog.gabrielorlando.dev.br/">Inicio</a></li>
+                            <li class="nav-item"><a class="btn btn-outline-dark" href="blog.gabrielorlando.dev.br/index.html#section_sobre">Categorias</a></li>
+                            <li class="nav-item" style="display: none;"><a class="btn btn-outline-dark" href="painel_controle/dashboard.php">Painel de Controle</a></li>
+                            <li class="nav-item"></li>
+                        </ul>
+
+                        <div class="col-md-2">
+                            <a href="index.html" class="btn btn-outline-success">Login</a>
+
+                            <div class="dropdown" style="display: none;">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="menu_usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span id="span_nome_usuario">Nome Usuário</span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="menu_usuario">
+                                    <a class="dropdown-item" href="#">Perfil</a>
+                                    <a class="dropdown-item" href="#">Configurações da Conta</a>
+                                    <a class="dropdown-item" href="php/user/sair.php">Sair</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="section_post">
+                <h1 class="" id="post_title">Título</h1>
+                <h5 class="" id="post_meta">Metadados</h5>
+                
+                <hr>
+
+                <div id="div_texto"></div>
+
+            </section>
+
+            <hr>
+            
+            <section id="section_outrosPosts">
+
+            </section>
+        </main>
+
+        <footer>
+            Desenvolvido por <a href="https://gabrielorlando.dev.br" target="_blank">Gabriel Orlando</a> &copy; 2023
+        </footer>
+    </div>
 </body>
 </html>
